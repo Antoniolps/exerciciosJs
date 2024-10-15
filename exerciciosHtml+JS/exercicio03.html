@@ -1,0 +1,23 @@
+<!--
+3.Crie uma página que gere um número aleatório entre 1 e 100 e permita que o usuário tente adivinhar. 
+Informe se a tentativa é maior, menor ou igual ao número gerado.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 03</title>
+</head>
+<body>
+    <h1>Adivinhe o número</h1>
+    <form>
+        <label for="numero">Numero:</label>
+        <input type="number" id="numero" placeholder="Digite um numero qualquer">
+        <button type="button" onclick="verificarTentativa()">Adivinhar</button>
+    </form>
+    <p id="resultado"></p>
+    <script src="./exercicio03.js"></script>
+</body>
+</html>

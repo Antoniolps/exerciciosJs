@@ -4,12 +4,12 @@ Exiba se o aluno foi aprovado (média >= 7) ou reprovado (média < 7).
  */
 
 var notas = [];
-var qtdNotas = 4;
 
 var getNotas = () => {
-    for (let i = 1; i <= qtdNotas; i++) {
-        notas.push(parseFloat(getNota(i).value));
-    }  
+    notas.push(parseFloat(getNota(1).value));
+    notas.push(parseFloat(getNota(2).value));
+    notas.push(parseFloat(getNota(3).value));
+    notas.push(parseFloat(getNota(4).value));
 }
 
 var getNota = (i) => {
@@ -25,7 +25,7 @@ var calcularMedia = () => {
         return acc + nota;
     });
 
-    let media = soma / qtdNotas;
+    let media = soma / 4;
 
     if(media >= 7) {
         document.getElementById('resultado').innerHTML = `Aprovado! Média: ${media}`;
@@ -38,9 +38,10 @@ var calcularMedia = () => {
 }
 
 var limparCampos = () => {
-    for (let i = 1; i <= qtdNotas; i++) {
-        getNota(i).value = '';
-    }
+    getNota(1).value = '';
+    getNota(2).value = '';
+    getNota(3).value = '';
+    getNota(4).value = '';
 
     document.getElementById('resultado').innerHTML = '';
 }
