@@ -25,8 +25,8 @@ function exibirNomes(nome) {
 
 //TODO: Criar um validador de nomes com tamanho igual
 function compararNomes(){
-    let nomeCurto = nomes.pop();
-    let nomeLongo = nomes.pop();
+    let nomeCurto = nomes[0];
+    let nomeLongo = nomes[0];
 
     nomes.map(nome => { 
         if(nomeCurto.length < nome.length){
